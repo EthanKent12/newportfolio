@@ -1,92 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ethan Kent-Ogiata Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethan Kent-Ogiata | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header id="header">
-    <h1>Ethan Kent-Ogiata</h1>
-    <h2 id="typewriter-heading"></h1>
-  </header>  
+    <div id="loader">
+        <div class="loader"></div>
+    </div>
 
-  <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <main>
-    <section id="about" class="container">
-      <h2>About Me</h2>
-      <p>
-        
-Here's a revised version for the About Me section:
-
-I am currently pursuing a degree in Computer Information Technology at Lethbridge College, with coursework covering areas such as HTML/CSS, responsive email design, and customer service. With a strong passion for web development, I am eager to contribute my technical skills and attention to detail as an HTML Email Developer.
-
-In my role as a Tech Specialist at London Drugs, I developed a sharp ability to troubleshoot and resolve technical issues quickly, which complements my knowledge of HTML/CSS. This hands-on experience has strengthened my problem-solving abilities and reinforced my commitment to precision—skills that would directly benefit my work in HTML email development.
-
-Additionally, my time as a Salesperson at College Pro has further developed my communication and teamwork skills, making me well-suited for a collaborative environment like JAM Direct. I am particularly excited about the opportunity to work with your team because I have a genuine interest in crafting high-quality, responsive HTML emails. I have experience using table-based layouts and testing emails with Litmus to ensure cross-platform compatibility.
-
-I am eager to apply my skills, learn from experienced professionals, and grow as a web developer.
-
-
-
-
-
-
-
-      </p>
-    </section>
-
-    <section id="skills">
-      <h2>Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-item">HTML / CSS</div>
-        <div class="skill-item">Responsive Email Design</div>
-        <div class="skill-item">Table-Based Layouts</div>
-        <div class="skill-item">Email Testing (Litmus)</div>
-        <div class="skill-item">Problem Solving</div>
-        <div class="skill-item">Collaboration</div>
-        <div class="skill-item">Attention to Detail</div>
-        <div class="skill-item">Adaptability</div>
-      </div>
-    </section>
     
+    <div id="main-content" style="display:none;">
+        <!-- Hero Section -->
+        <header id="hero">
+            <h1>Ethan Kent-Ogiata</h1>
+            <p id="typewriter"></p>
+        </header>
 
-    <section id="projects" class="container">
-      <h2>Projects</h2>
-      <div class="project">
-        <h3>Lorem Ipsum</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </div>
-      <div class="project">
-        <h3>Lorem Ipsum</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </div>
-      <div class="project">
-        <h3>Lorem Ipsum</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </section>
+        <!-- About Me Section -->
+        <section id="about-me">
+            <h2>About Me</h2>
+            <p>Currently attending Lethbridge College working toward a Computer Information Technology degree, studies include but are not limited to: HTML/CSS, responsive email design, and customer service. I am quite interested in joining your team and feel my technical skill set and attention to detail make me a strong candidate for this position. This, combined with my experience as a Tech Specialist at London Drugs, instilled an uncanny ability to troubleshoot and fix technical issues in record time. The experience, which complements knowledge in HTML/CSS, further bolsters problem-solving skills and hones attention to detail—two strengths that I will bring to the position of HTML Email Developer. Moreover, through my work as a Salesperson at College Pro, I have been able to enhance my communication and collaboration skills further, which will help me function well in a team-oriented environment. I love this opportunity because I enjoy creating high-quality, responsive HTML emails. My experience includes designing emails using table-based layouts and testing via Litmus to ensure my emails work seamlessly across multiple platforms. I'm committed to providing pixel-perfect designs that match the needs of your clients, and I would love to learn from all the talented people at JAM Direct to further hone my skills. I look forward to any opportunity to contribute to your team and am excited about the possibility of growing with your organization as a web developer.</p>
+        </section>
 
-    <section id="contact" class="container">
-      <h2>Contact Me</h2>
-      <p>Email: <a href="mailto:ethanogiata12@gmail.com">ethanogiata12@gmail.com</a></p>
-      <p>Phone: 587-370-0528</p>
-      <p>Location: South Lethbridge</p>
-    </section>
-  </main>
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>Skills</h2>
+            <div id="skills-container" class="skills-section"></div>
+            <button id="previous-skill" onclick="previousSkill()">Back</button>
+            <button id="next-skill" onclick="nextSkill()">Next</button>
+            <div class="legend">
+                <p><span class="legend-box high"></span> High Proficiency</p>
+                <p><span class="legend-box intermediate"></span> Intermediate Proficiency</p>
+                <p><span class="legend-box low"></span> Low Proficiency</p>
+            </div>
+        </section>
+    </div>
 
-  <footer>
-    <p>© 2024 Ethan Kent-Ogiata</p>
-  </footer>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
