@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #121212;
+    background-color: #FFA586;
     color: #f0f0f0;
     height: 100vh;
 }
@@ -81,7 +81,7 @@ h1, h2, p {
 /* Hero Section */
 #hero {
     padding: 100px 20px;
-    background-color: #4583ac;
+    background-color: #F39F5A;
     text-align: center;
     height: 100vh;
 }
@@ -96,7 +96,7 @@ h1, h2, p {
 #about-me {
     margin: 20px auto;
     padding: 40px;
-    background-color: #1a1a1a;
+    background-color: #662549;
     border-radius: 8px;
     max-width: 800px; /* Ensures content doesn't stretch too wide */
 }
@@ -133,7 +133,7 @@ h1, h2, p {
 }
 
 .progress-wrapper {
-    background-color: #555;
+    background-color: #E8BCB9;
     border-radius: 5px;
     height: 12px; /* Increased height for better visibility */
     width: 100%;
