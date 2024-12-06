@@ -4,8 +4,8 @@ let charIndex = 0;
 
 function typeText() {
     const element = document.getElementById("typewriter");
-    if (charIndex < typewriterText[0].length) {
-        element.textContent += typewriterText[0][charIndex];
+    if (element && charIndex < typewriterText[0].length) {
+        element.textcontent += typewriterText[0][charIndex];
         charIndex++;
         setTimeout(typeText, 100);
     }

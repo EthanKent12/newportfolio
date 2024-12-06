@@ -139,7 +139,7 @@ h2, p {
         }
 
         .container .card:hover button {
-            transform: scale(16.5);
+            transform: scale(1.5);
             opacity: 0.5;
         }
 
