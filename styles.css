@@ -74,7 +74,42 @@ h2, p {
 /* Footer */
 footer {
     padding: 20px;
-    background-color: #1a1a1a;
-    color: white;
+    background-color: #1a1a1a; /* Dark background */
+    color: #f0f0f0; /* Light text */
     text-align: center;
+    border-top: 2px solid #f39f5a; /* Accent border */
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-contact,
+.footer-socials,
+.footer-copyright {
+    flex: 1;
+    min-width: 200px;
+}
+
+footer a {
+    color: #f39f5a; /* Accent color */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+    footer a:hover {
+        color: #ae445a; /* Hover effect */
+    }
+
+/* Responsive Footer Layout */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
 }
