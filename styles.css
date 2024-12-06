@@ -165,6 +165,26 @@ h2, p {
         transition: 0.3s ease;
     }
 
+    .container .card3 .pic {
+        background-image: url(csharp.png);
+        transition: 0.2s ease;
+    }
+
+    .container .card4 .pic {
+        background-image: url(unity.png);
+        transition: 0.2s ease;
+    }
+
+    .container .card5 .pic {
+        background-image: url(php.png);
+        transition: 0.2s ease;
+    }
+
+    .container .card6 .pic {
+        background-image: url(c++.png);
+        transition: 0.2s ease;
+    }
+
     .container .card2 button {
         background-color: #0942ad;
     }
