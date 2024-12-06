@@ -9,13 +9,16 @@ body {
 
 /* Hero Section */
 #hero {
-    background-color: #F39F5A;
+    padding: 20px; /* Reduced padding for a smaller height */
+    background-color: #F39F5A; /* Keeps the background color */
     text-align: center;
-    height: 500px;
+    height: auto; /* Removes fixed height */
+    border-bottom: 2px solid #AE445A; /* Optional: Adds a visual separation from the rest of the content */
 }
 
 h1 {
-    font-size: 5vw;
+    font-size: 2rem; /* Smaller font size for a header */
+    margin: 0; /* Removes extra spacing */
     color: white;
 }
 
