@@ -1,234 +1,253 @@
-/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #121212;
-    color: #f0f0f0;
-    height: 100vh;
+    color: #333;
+    line-height: 1.6;
 }
 
-/* Sticky Header */
-#sticky-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #1a1a1a;
-    padding: 10px 0;
-    z-index: 1000; /* Keep it above other content */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-}
-
-#sticky-header nav ul {
-    list-style-type: none;
+header {
+    background-color: black; /* Light shade of black */
+    padding: 5px 0;
+    position: sticky; /* Header stays even when you scroll */
+    top: 0; /* Position it at the top */
+    left: 50%; /* Move it to the horizontal center */
+    transform: translateX(-50%); /* Center it perfectly */
+    width: 400px;
+    height: 50px;
+    z-index: 999; /* Ensure the header stays on top of other content */
     display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
 }
 
-#sticky-header nav ul li {
-    margin: 0 20px;
-}
-
-#sticky-header nav ul li a {
-    color: #f0f0f0;
+header a {
     text-decoration: none;
-    font-size: 1.2em;
-    padding: 5px 15px;
-    transition: background-color 0.3s ease;
+    color: white;
+    font-size: 14px;
+    padding: 0 20px;
 }
 
-#sticky-header nav ul li a:hover {
-    background-color: #4583ac; /* Blue highlight on hover */
-    border-radius: 5px;
+header a:hover {
+    transform: scale(1.1); /* Adjust scale factor */
+    transition: 0.3s ease;
 }
 
-
-#loader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
-    display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center;     /* Centers vertically */
-    z-index: 1000;           /* Ensures it sits above all other content */
-}
-
-.loader {
-    width: 50px;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    border: 8px solid lightblue;
-    border-right-color: #4583ac;
-    animation: l2 1s infinite linear;
-  }
-  @keyframes l2 {to{transform: rotate(1turn)}}
-
-h1 {
-    color: green; 
-    font-size: 5vw; /* Adjusts based on viewport width */
-}
-
-h1, h2, p {
-    text-align: center;
-}
-
-/* Hero Section */
-#hero {
-    padding: 100px 20px;
-    background-color: #4583ac;
-    text-align: center;
-    height: 100vh;
-}
-
-#typewriter {
-    font-size: 2.5em;
-    font-weight: bold;
-    letter-spacing: 2px;
-}
-
-/* About Me Section */
-#about-me {
-    margin: 20px auto;
-    padding: 40px;
-    background-color: #1a1a1a;
-    border-radius: 8px;
-    max-width: 800px; /* Ensures content doesn't stretch too wide */
-}
-
-/* Skills Section */
-.skills-section {
+.intro {
+    height: 350px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    margin: 40px;
+    font-family: 'Sequel Sans';
+    background-color: transparent;
+    font-size: 68px;
+    color: black;
     text-align: center;
-    opacity: 0;
-    transition: opacity 0.5s ease;
 }
 
-.skill {
+.intro h2, .intro p {
+    margin: 0;
+}
+
+.intro p {
+    font-size: 36px;
+}
+
+#about-me {
     display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px;
     align-items: center;
-    justify-content: flex-start;
-    gap: 20px;
-    padding: 15px;
-    background-color: #333;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    background-color: #f4f4f4;
 }
 
-.skill-logo {
-    width: 60px; /* Slightly bigger logo */
-    height: 60px;
+.about-me-container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.skill-info {
-    flex: 1;
-}
-
-.progress-wrapper {
-    background-color: #555;
-    border-radius: 5px;
-    height: 12px; /* Increased height for better visibility */
+.about-me-picture img {
     width: 100%;
-    overflow: hidden;
-    margin-top: 5px;
+    max-width: 300px;
+    height: auto;
+    border-radius: 50%;
 }
 
-.progress-bar {
-    height: 12px;
+.resume-btn {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
     border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-/* Legend */
-.legend {
-    margin-top: 20px;
+.resume-btn:hover {
+    background-color: #0056b3;
+}
+
+#skills {
+    padding: 40px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skill-card {
+    flex: 1 1 calc(33.333% - 20px);
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.skill-card img {
+    max-width: 80px;
+    margin-bottom: 10px;
+}
+
+.skill-card h3 {
+    font-size: 1.5rem;
+    color: #007BFF;
+    margin-bottom: 10px;
+}
+
+.skill-card p {
+    font-size: 1rem;
+    color: #333;
+}
+
+.skill-card.html-card:hover {
+    background-color: #FFA500; /* Orange */
+    color: white;
+}
+
+.skill-card.css-card:hover {
+    background-color: #007BFF; /* Blue */
+    color: white;
+}
+
+.skill-card.js-card:hover {
+    background-color: #FFD700; /* Yellow */
+    color: white;
+}
+
+.skill-card.unity-card:hover {
+    background-color: #000; /* Black */
+    color: white;
+}
+
+.skill-card.csharp-card:hover {
+    background-color: #800080; /* Purple */
+    color: white;
+}
+
+.skill-card.php-card:hover {
+    background-color: #808080; /* Grey */
+    color: white;
+}
+
+#projects {
+    padding: 40px;
+    background-color: #fff;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    flex: 1 1 calc(33.333% - 20px);
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.project-details {
     display: flex;
     gap: 20px;
-    justify-content: center;
+    align-items: center;
 }
 
-.legend-box {
-    display: inline-block;
-    width: 25px;
-    height: 25px;
-    border-radius: 5px;
-    margin-right: 5px;
+.project-image {
+    flex: 1;
+    max-width: 150px;
+    border-radius: 8px;
 }
 
-.legend-box.high {
-    background-color: green;
+.project-description {
+    flex: 2;
 }
 
-.legend-box.intermediate {
-    background-color: yellow;
+.technologies-used {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
 }
 
-.legend-box.low {
-    background-color: red;
+.tech-logo {
+    max-width: 30px;
+    border-radius: 4px;
 }
 
-/* Button Styles */
-#next-skill, #previous-skill {
-    margin-top: 30px;
-    padding: 12px 25px;
-    background-color: #555;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#next-skill:hover, #previous-skill:hover {
-    background-color: #888;
-}
-
-/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 6vw; /* Larger text for mobile */
+    .project-card,
+    .skill-card {
+        flex: 1 1 calc(100% - 20px);
     }
 
-    #hero {
-        padding: 50px 20px;
-    }
-
-    #about-me {
-        padding: 20px;
-    }
-
-    .skill {
+    .project-details {
         flex-direction: column;
-        align-items: center;
     }
 
-    .skill-logo {
-        width: 50px;
-        height: 50px;
-    }
-
-    .legend {
-        flex-direction: column;
+    .project-image {
+        max-width: 100%;
     }
 }
 
-@media (max-width: 480px) {
-    #typewriter {
-        font-size: 2em; /* Adjusts the typewriter font size for smaller screens */
-    }
+#contact {
+    text-align: center;
+    padding: 40px;
+    background-color: #333;
+    color: white;
+}
 
-    .skill {
-        padding: 10px;
-    }
+.contact-btn {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
 
-    #next-skill, #previous-skill {
-        width: 100%;
-        padding: 15px;
-    }
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
 }

@@ -3,42 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ethan Kent-Ogiata | Portfolio</title>
+    <title>Portfolio | Ethan Kent-Ogiata</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="loader">
-        <div class="loader"></div>
+    <!-- Header with Navigation -->
+    <header id="hero">
+        <a href="#about-me">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </header>
+
+    <div class="intro">
+        <h2>Ethan Kent-Ogiata</h2>
+        <p id="typewriter">Web Developer | Problem Solver | Creative Thinker</p>
     </div>
 
-    
-    <div id="main-content" style="display:none;">
-        <!-- Hero Section -->
-        <header id="hero">
-            <h1>Ethan Kent-Ogiata</h1>
-            <p id="typewriter"></p>
-        </header>
-
-        <!-- About Me Section -->
-        <section id="about-me">
-            <h2>About Me</h2>
-            <p>Currently attending Lethbridge College working toward a Computer Information Technology degree, studies include but are not limited to: HTML/CSS, responsive email design, and customer service. I am quite interested in joining your team and feel my technical skill set and attention to detail make me a strong candidate for this position. This, combined with my experience as a Tech Specialist at London Drugs, instilled an uncanny ability to troubleshoot and fix technical issues in record time. The experience, which complements knowledge in HTML/CSS, further bolsters problem-solving skills and hones attention to detail—two strengths that I will bring to the position of HTML Email Developer. Moreover, through my work as a Salesperson at College Pro, I have been able to enhance my communication and collaboration skills further, which will help me function well in a team-oriented environment. I love this opportunity because I enjoy creating high-quality, responsive HTML emails. My experience includes designing emails using table-based layouts and testing via Litmus to ensure my emails work seamlessly across multiple platforms. I'm committed to providing pixel-perfect designs that match the needs of your clients, and I would love to learn from all the talented people at JAM Direct to further hone my skills. I look forward to any opportunity to contribute to your team and am excited about the possibility of growing with your organization as a web developer.</p>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills">
-            <h2>Skills</h2>
-            <div id="skills-container" class="skills-section"></div>
-            <button id="previous-skill" onclick="previousSkill()">Back</button>
-            <button id="next-skill" onclick="nextSkill()">Next</button>
-            <div class="legend">
-                <p><span class="legend-box high"></span> High Proficiency</p>
-                <p><span class="legend-box intermediate"></span> Intermediate Proficiency</p>
-                <p><span class="legend-box low"></span> Low Proficiency</p>
+    <!-- About Me Section -->
+    <section id="about-me">
+        <div class="about-me-container">
+            <!-- Picture Div -->
+            <div class="about-me-picture">
+                <img src=".jpg" alt="Ethan Kent-Ogiata">
             </div>
-        </section>
-    </div>
 
-    <script src="script.js"></script>
+            <!-- Description Div -->
+            <div class="about-me-description">
+                <h2>About Me</h2>
+                <p>Hi, I'm Ethan Kent-Ogiata, a Computer Information Technology student at Lethbridge College. Passionate about web development, I specialize in creating high-quality, responsive designs. With a knack for problem-solving and troubleshooting, I strive to deliver user-focused solutions.</p>
+                <p>Driven by curiosity and a love for learning, I enjoy tackling challenges and expanding my skillset to stay at the forefront of technology.</p>
+                <div class="resume-download">
+                    <a href="resume.pdf" download="Ethan_Kent-Ogiata_Resume.pdf" class="resume-btn">Download Resume</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill-card html-card">
+                <img src="html.png" alt="HTML Logo">
+                <h3>HTML</h3>
+                <p>High proficiency in building structured and semantic web content.</p>
+            </div>
+            <div class="skill-card css-card">
+                <img src="css.png" alt="CSS Logo">
+                <h3>CSS</h3>
+                <p>Advanced knowledge of responsive designs and animations.</p>
+            </div>
+            <div class="skill-card js-card">
+                <img src="js.png" alt="JavaScript Logo">
+                <h3>JavaScript</h3>
+                <p>Experience in creating interactive and dynamic web applications.</p>
+            </div>
+            <div class="skill-card unity-card">
+                <img src="unity.png" alt="Unity Logo">
+                <h3>Unity</h3>
+                <p>Familiarity with game development and 3D environments.</p>
+            </div>
+            <div class="skill-card csharp-card">
+                <img src="csharp.png" alt="C# Logo">
+                <h3>C#</h3>
+                <p>Proficient in object-oriented programming and Unity integration.</p>
+            </div>
+            <div class="skill-card php-card">
+                <img src="php.png" alt="PHP Logo">
+                <h3>PHP</h3>
+                <p>Experience with backend development for dynamic websites.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-container">
+            <a href="https://ethankent12.github.io/darkMode/" target="_blank" class="project-card">
+                <h3>Dark Mode Switch</h3>
+                <div class="project-details">
+                    <img src="darkmode.png" alt="Dark Mode Switch Screenshot" class="project-image">
+                    <div class="project-description">
+                        <p>Created a responsive dark mode switch for websites, allowing users to toggle between light and dark themes seamlessly. The switch enhances user accessibility and customizability.</p>
+                        <div class="technologies-used">
+                            <img src="html.png" alt="HTML" class="tech-logo">
+                            <img src="css.png" alt="CSS" class="tech-logo">
+                            <img src="js.png" alt="JavaScript" class="tech-logo">
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="https://github.com/EthanKent12/flurpy-bird-source" target="_blank" class="project-card">
+                <h3>Flurpy Bird</h3>
+                <p>Clone of Popular Flappy Bird Game</p>
+                <div class="technologies-used">
+                    <img src="unity.png" alt="Unity" class="tech-logo">
+                    <img src="csharp.png" alt="C#" class="tech-logo">
+                </div>
+            </a>
+            <a href="https://yourgithubusername.github.io/project-3" target="_blank" class="project-card">
+                <h3>Project 3</h3>
+                <p>Description of your project highlighting technologies and purpose.</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>If you'd like to collaborate or discuss opportunities, feel free to reach out!</p>
+        <a href="mailto:ethan.kentogiata@example.com" class="contact-btn">Email Me</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Social Media</h4>
+                <ul>
+                    <li><a href="https://github.com/yourgithubusername" target="_blank">GitHub</a></li>
+                    <li><a href="https://linkedin.com/in/yourlinkedinprofile" target="_blank">LinkedIn</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <p>&copy; 2024 Ethan Kent-Ogiata. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
