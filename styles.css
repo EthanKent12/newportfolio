@@ -4,14 +4,15 @@ body {
     padding: 0;
     color: #333;
     line-height: 1.6;
+    height: 2000px; /* For demonstration of scrolling */
 }
 
 header {
-    background-color: black; /* Light shade of black */
+    background-color: rgba(0, 0, 0, 0.7); /* Partially transparent by default */
     padding: 5px 0;
-    position: sticky; /* Header stays even when you scroll */
+    position: sticky; /* Stays at the top of the viewport */
     top: 0; /* Position it at the top */
-    left: 50%; /* Move it to the horizontal center */
+    left: 50%; /* Center horizontally */
     transform: translateX(-50%); /* Center it perfectly */
     width: 400px;
     height: 50px;
@@ -20,6 +21,11 @@ header {
     justify-content: space-between;
     align-items: center;
     border-radius: 20px;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+header:hover {
+    background-color: rgba(0, 0, 0, 1); /* Fully visible on hover */
 }
 
 header a {
@@ -27,11 +33,11 @@ header a {
     color: white;
     font-size: 14px;
     padding: 0 20px;
+    transition: transform 0.3s ease;
 }
 
 header a:hover {
-    transform: scale(1.1); /* Adjust scale factor */
-    transition: 0.3s ease;
+    transform: scale(1.1); /* Slight scaling on hover */
 }
 
 .intro {
@@ -56,9 +62,11 @@ header a:hover {
     font-size: 36px;
 }
 
+
 #about-me {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     gap: 20px;
     padding: 40px;
     align-items: center;
@@ -74,7 +82,6 @@ header a:hover {
     width: 100%;
     max-width: 300px;
     height: auto;
-    border-radius: 50%;
 }
 
 .resume-btn {
