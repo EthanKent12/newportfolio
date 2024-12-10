@@ -18,3 +18,26 @@ document.addEventListener("DOMContentLoaded", function() {
     typeWriter(text, 0);
 });
 
+// Wait until the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.getElementById("contact-modal");
+    const openModalButton = document.getElementById("open-modal");
+    const closeModalButton = document.getElementById("close-modal");
+
+    // Open the modal when the button is clicked
+    openModalButton.addEventListener("click", () => {
+        modal.style.display = "flex"; // Show the modal
+    });
+
+    // Close the modal when the close button is clicked
+    closeModalButton.addEventListener("click", () => {
+        modal.style.display = "none"; // Hide the modal
+    });
+
+    // Close the modal when clicking outside the modal content
+    window.addEventListener("click", (event) => {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+});
