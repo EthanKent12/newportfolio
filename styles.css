@@ -43,6 +43,15 @@ body {
     z-index: 1000;
 }
 
+.theme-switch-wrapper em {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-color);
+    font-style: normal;
+    margin-left: 10px;
+}
+
 .theme-switch {
     display: inline-block;
     height: 34px;
